@@ -1,0 +1,2 @@
+# botghast
+Personal Bot Discord
