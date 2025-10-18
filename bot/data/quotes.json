@@ -1,0 +1,490 @@
+[
+  {
+    "citation": "Penser, c'est dire non.",
+    "author": "Alain"
+  },
+  {
+    "citation": "La culture est ce qui fait de l’homme autre chose qu’un accident de l’univers.",
+    "author": "André Malraux"
+  },
+  {
+    "citation": "L’homme est un animal politique.",
+    "author": "Aristote"
+  },
+  {
+    "citation": "Le bonheur est le but de la vie.",
+    "author": "Aristote"
+  },
+  {
+    "citation": "L’art est une imitation de la nature.",
+    "author": "Aristote"
+  },
+  {
+    "citation": "La nature a horreur du vide.",
+    "author": "Aristote"
+  },
+  {
+    "citation": "La justice consiste à donner à chacun ce qui lui est dû.",
+    "author": "Aristote"
+  },
+  {
+    "citation": "L’homme est un animal rationnel.",
+    "author": "Aristote"
+  },
+  {
+    "citation": "L’homme est par nature un être sociable.",
+    "author": "Aristote"
+  },
+  {
+    "citation": "L'espoir est le rêve d’un homme éveillé.",
+    "author": "Aristote"
+  },
+  {
+    "citation": "Le plus grand bonheur du plus grand nombre.",
+    "author": "Bentham"
+  },
+  {
+    "citation": "L’homme est un être de culture.",
+    "author": "Claude Lévi - Strauss"
+  },
+  {
+    "citation": "Le scepticisme est le premier pas vers la vérité.",
+    "author": "Denis Diderot"
+  },
+  {
+    "citation": "Je pense, donc je suis.",
+    "author": "Descartes"
+  },
+  {
+    "citation": "L’homme est maître et possesseur de la nature.",
+    "author": "Descartes"
+  },
+  {
+    "citation": "La raison est une lumière divine.",
+    "author": "Descartes"
+  },
+  {
+    "citation": "Les hommes naissent et demeurent libres et égaux en droits.",
+    "author": "Déclaration des droits de l’homme et du citoyen"
+  },
+  {
+    "citation": "Le savoir est pouvoir.",
+    "author": "Francis Bacon"
+  },
+  {
+    "citation": "Le moi n’est pas maître dans sa propre maison.",
+    "author": "Freud"
+  },
+  {
+    "citation": "On ne peut rien apprendre aux hommes. On peut seulement les aider à trouver la réponse en eux-mêmes.",
+    "author": "Galilée"
+  },
+  {
+    "citation": "L'État est l’incarnation de l’intérêt général.",
+    "author": "Hegel"
+  },
+  {
+    "citation": "L’esprit, c’est la liberté.",
+    "author": "Hegel"
+  },
+  {
+    "citation": "L’histoire est le progrès de la conscience de la liberté.",
+    "author": "Hegel"
+  },
+  {
+    "citation": "Tout ce qui est rationnel est réel, tout ce qui est réel est rationnel.",
+    "author": "Hegel"
+  },
+  {
+    "citation": "L’histoire est écrite par les vainqueurs.",
+    "author": "Hegel"
+  },
+  {
+    "citation": "Rien de grand ne se fait sans passion.",
+    "author": "Hegel"
+  },
+  {
+    "citation": "L’histoire est le tribunal du monde.",
+    "author": "Hegel"
+  },
+  {
+    "citation": "L’essence de l’homme est dans le langage.",
+    "author": "Heidegger"
+  },
+  {
+    "citation": "L’homme est le seul être pour qui son existence est un problème.",
+    "author": "Heidegger"
+  },
+  {
+    "citation": "L'homme est un loup pour l'homme.",
+    "author": "Hobbes"
+  },
+  {
+    "citation": "Le sentiment que l'homme supporte le plus difficilement, c'est la pitié, surtout quand il la mérite.",
+    "author": "Honoré de Balzac"
+  },
+  {
+    "citation": "Rien dans la vie n'exige plus d'attention que les choses qui paraissent naturelles ; on se défie toujours assez de l'extraordinaire.",
+    "author": "Honoré de Balzac"
+  },
+  {
+    "citation": "L'avarice commence où la pauvreté cesse.",
+    "author": "Honoré de Balzac"
+  },
+  {
+    "citation": "Depuis la mollesse d'une éponge mouillée jusqu'à la dureté d'une pierre ponce, il y a des nuances infinies. Voilà l'homme.",
+    "author": "Honoré de Balzac"
+  },
+  {
+    "citation": "La violence est le dernier refuge de l’incompétence.",
+    "author": "Isaac Asimov"
+  },
+  {
+    "citation": "L'inconscient est structuré comme un langage.",
+    "author": "Jacques Lacan"
+  },
+  {
+    "citation": "L’homme est condamné à être libre.",
+    "author": "Jean - Paul Sartre"
+  },
+  {
+    "citation": "L’existence précède l’essence.",
+    "author": "Jean - Paul Sartre"
+  },
+  {
+    "citation": "Le courage, c’est de chercher la vérité et de la dire.",
+    "author": "Jean Jaurès"
+  },
+  {
+    "citation": "Tout homme a droit à la liberté de pensée et d'expression.",
+    "author": "John Locke"
+  },
+  {
+    "citation": "La liberté des uns s'arrête là où commence celle des autres.",
+    "author": "John Stuart Mill"
+  },
+  {
+    "citation": "La liberté, c’est l’indépendance de la volonté.",
+    "author": "Kant"
+  },
+  {
+    "citation": "Le devoir est la nécessité d’accomplir une action par respect pour la loi.",
+    "author": "Kant"
+  },
+  {
+    "citation": "La loi morale en moi et le ciel étoilé au - dessus de moi.",
+    "author": "Kant"
+  },
+  {
+    "citation": "Le devoir ne peut être un simple calcul d'intérêt personnel.",
+    "author": "Kant"
+  },
+  {
+    "citation": "Le temps est la condition de la possibilité de toute expérience.",
+    "author": "Kant"
+  },
+  {
+    "citation": "La morale est l'ensemble des règles de conduite tirées de la raison.",
+    "author": "Kant"
+  },
+  {
+    "citation": "Le bonheur est un idéal de l’imagination, et non de la raison.",
+    "author": "Kant"
+  },
+  {
+    "citation": "La religion est l’opium du peuple.",
+    "author": "Karl Marx"
+  },
+  {
+    "citation": "Tu as le pouvoir sur ton esprit, pas sur les événements extérieurs. Réalise cela, et tu trouveras la force.",
+    "author": "Marc Aurèle"
+  },
+  {
+    "citation": "La meilleure revanche est de ne pas devenir comme celui qui t’a blessé.",
+    "author": "Marc Aurèle"
+  },
+  {
+    "citation": "Si ce n’est pas juste, ne le fais pas ; si ce n’est pas vrai, ne le dis pas.",
+    "author": "Marc Aurèle"
+  },
+  {
+    "citation": "Le bonheur de votre vie dépend de la qualité de vos pensées.",
+    "author": "Marc Aurèle"
+  },
+  {
+    "citation": "Accepte les choses auxquelles le destin t’attache et aime les gens que le destin t’a donnés.",
+    "author": "Marc Aurèle"
+  },
+  {
+    "citation": "Quand tu te lèves le matin, pense à quel précieux privilège c’est d’être en vie, de respirer, de penser, de jouir, d’aimer.",
+    "author": "Marc Aurèle"
+  },
+  {
+    "citation": "Il n’est pas de mort qu’un homme doive craindre, mais il doit craindre de ne jamais commencer à vivre.",
+    "author": "Marc Aurèle"
+  },
+  {
+    "citation": "Apprends à être indifférent à ce qui ne fait aucune différence.",
+    "author": "Marc Aurèle"
+  },
+  {
+    "citation": "Chaque heure, concentre ton esprit avec attention sur la tâche à accomplir, avec dignité, sympathie humaine, bienveillance et liberté, et laisse de côté toutes les autres pensées.",
+    "author": "Marc Aurèle"
+  },
+  {
+    "citation": "Ne perds pas de temps à discuter de ce que devrait être un homme bon. Sois-en un.",
+    "author": "Marc Aurèle"
+  },
+  {
+    "citation": "Tout est vanité.",
+    "author": "Marc Aurèle"
+  },
+  {
+    "citation": "L’État est le monopole de la violence légitime.",
+    "author": "Max Weber"
+  },
+  {
+    "citation": "Les amateurs discutent tactique : les professionnels discutent logistique.",
+    "author": "Napoléon Bonaparte"
+  },
+  {
+    "citation": "N'interrompez jamais un ennemi qui est en train de faire une erreur.",
+    "author": "Napoléon Bonaparte"
+  },
+  {
+    "citation": "On ne conduit le peuple qu'en lui montrant un avenir : un chef est un marchand d'espérance.",
+    "author": "Napoléon Bonaparte"
+  },
+  {
+    "citation": "Qui sauve son pays ne viole aucune loi.",
+    "author": "Napoléon Bonaparte"
+  },
+  {
+    "citation": "Sachez écouter, et soyez sûr que le silence produit souvent le même effet que la science.",
+    "author": "Napoléon Bonaparte"
+  },
+  {
+    "citation": "La force est la loi des animaux, les hommes sont gouvernés par la conviction.",
+    "author": "Napoléon Bonaparte"
+  },
+  {
+    "citation": "On ne détruit que réellement que ce qu'on remplace.",
+    "author": "Napoléon III"
+  },
+  {
+    "citation": "La pauvreté ne sera plus séditieuse, lorsque l'opulence ne sera plus oppressive.",
+    "author": "Napoléon III"
+  },
+  {
+    "citation": "Surtout n'ayez pas peur du peuple, il est plus conservateur que vous !",
+    "author": "Napoléon III"
+  },
+  {
+    "citation": "En politique il faut guérir les maux, jamais les venger.",
+    "author": "Napoléon III"
+  },
+  {
+    "citation": "Vivre, c'est éprouver la contradiction permanente entre le désir et l'acte.",
+    "author": "Nietzsche"
+  },
+  {
+    "citation": "Dieu est mort.",
+    "author": "Nietzsche"
+  },
+  {
+    "citation": "L’éternel retour du même.",
+    "author": "Nietzsche"
+  },
+  {
+    "citation": "Le seul moyen de se délivrer de la tentation, c'est d'y céder.",
+    "author": "Oscar Wilde"
+  },
+  {
+    "citation": "La politique est l’art du possible.",
+    "author": "Otto von Bismarck"
+  },
+  {
+    "citation": "L’être est et le non - être n’est pas.",
+    "author": "Parménide"
+  },
+  {
+    "citation": "L'homme est un roseau pensant.",
+    "author": "Pascal"
+  },
+  {
+    "citation": "Le cœur a ses raisons que la raison ignore.",
+    "author": "Pascal"
+  },
+  {
+    "citation": "Le monde sensible est une copie imparfaite du monde des idées.",
+    "author": "Platon"
+  },
+  {
+    "citation": "Le désir est une tension vers un objet absent.",
+    "author": "Platon"
+  },
+  {
+    "citation": "Le beau est la splendeur du vrai.",
+    "author": "Platon"
+  },
+  {
+    "citation": "L’âme est immortelle.",
+    "author": "Platon"
+  },
+  {
+    "citation": "La violence engendre la violence.",
+    "author": "Platon"
+  },
+  {
+    "citation": "Tout ce qui est beau est difficile.",
+    "author": "Platon"
+  },
+  {
+    "citation": "L'homme est la mesure de toutes choses.",
+    "author": "Protagoras"
+  },
+  {
+    "citation": "La vérité est relative à chacun.",
+    "author": "Protagoras"
+  },
+  {
+    "citation": "L’homme est né libre, et partout il est dans les fers.",
+    "author": "Rousseau"
+  },
+  {
+    "citation": "L'homme est bon par nature.",
+    "author": "Rousseau"
+  },
+  {
+    "citation": "La liberté consiste à n'obéir qu'à la loi que l'on s'est prescrite.",
+    "author": "Rousseau"
+  },
+  {
+    "citation": "Le bonheur est une forme de liberté.",
+    "author": "Sartre"
+  },
+  {
+    "citation": "L'enfer, c'est les autres.",
+    "author": "Sartre"
+  },
+  {
+    "citation": "La conscience est une maladie.",
+    "author": "Schopenhauer"
+  },
+  {
+    "citation": "On ne naît pas femme : on le devient.",
+    "author": "Simone de Beauvoir"
+  },
+  {
+    "citation": "La seule chose que je sais, c’est que je ne sais rien.",
+    "author": "Socrate"
+  },
+  {
+    "citation": "Tout ce que je sais, c’est que je ne sais rien.",
+    "author": "Socrate"
+  },
+  {
+    "citation": "Connais - toi toi - même.",
+    "author": "Socrate"
+  },
+  {
+    "citation": "La vie sans examen ne vaut pas d'être vécue.",
+    "author": "Socrate"
+  },
+  {
+    "citation": "Le désir est l’essence de l’homme.",
+    "author": "Spinoza"
+  },
+  {
+    "citation": "Rien n’est plus honorable qu’un cœur reconnaissant.",
+    "author": "Sénèque"
+  },
+  {
+    "citation": "Nous souffrons plus souvent dans notre imagination que dans la réalité.",
+    "author": "Sénèque"
+  },
+  {
+    "citation": "La vie est longue si tu sais en faire usage.",
+    "author": "Sénèque"
+  },
+  {
+    "citation": "Le temps que tu passes à t’inquiéter est du temps perdu, alors agis et surmonte tes craintes.",
+    "author": "Sénèque"
+  },
+  {
+    "citation": "Celui qui est brave est libre.",
+    "author": "Sénèque"
+  },
+  {
+    "citation": "Il n’y a pas de vent favorable pour celui qui ne sait pas où il va.",
+    "author": "Sénèque"
+  },
+  {
+    "citation": "La liberté n’est pas l’absence d’obstacles, mais le courage de les surmonter.",
+    "author": "Sénèque"
+  },
+  {
+    "citation": "Le sage ne cherche pas à posséder plus, mais à désirer moins.",
+    "author": "Sénèque"
+  },
+  {
+    "citation": "Il n’est pas difficile de supporter l’adversité ; ce qui est difficile, c’est de supporter la prospérité sans changer.",
+    "author": "Sénèque"
+  },
+  {
+    "citation": "Le meilleur des gouvernements est celui qui gouverne le moins.",
+    "author": "Thoreau"
+  },
+  {
+    "citation": "Manquer de temps, c’est manquer de priorités.",
+    "author": "Tim Ferriss"
+  },
+  {
+    "citation": "Le travail éloigne de nous trois grands maux : l’ennui, le vice et le besoin.",
+    "author": "Voltaire"
+  },
+  {
+    "citation": "Celui qui sourit en étant volé vole quelque chose au voleur.",
+    "author": "William Shakespeare"
+  },
+  {
+    "citation": "L’homme ne conquerra le monde qu’en se conquérant lui-même.",
+    "author": "Zénon de Citium"
+  },
+  {
+    "citation": "Ce n’est pas ce qui t’arrive, mais comment tu réagis qui importe.",
+    "author": "Épictète"
+  },
+  {
+    "citation": "Ce qui doit arriver arrivera, même si tu t’en inquiètes.",
+    "author": "Épictète"
+  },
+  {
+    "citation": "Tout ce qui est en ton pouvoir, fais-le ; ce qui ne l’est pas, ne t’en préoccupe pas.",
+    "author": "Épictète"
+  },
+  {
+    "citation": "Ne demande pas que les choses arrivent comme tu le souhaites, mais souhaite qu’elles arrivent comme elles arrivent, et tu seras heureux.",
+    "author": "Épictète"
+  },
+  {
+    "citation": "Ne t’explique pas ta philosophie. Incarne-la.",
+    "author": "Épictète"
+  },
+  {
+    "citation": "Le bonheur ne dépend que de nous.",
+    "author": "Épictète"
+  },
+  {
+    "citation": "La force de l’esprit est invisible.",
+    "author": "Épictète"
+  },
+  {
+    "citation": "Le plaisir est le commencement et la fin de la vie heureuse.",
+    "author": "Épicure"
+  },
+  {
+    "citation": "Le plaisir est l’unique bien.",
+    "author": "Épicure"
+  }
+]
