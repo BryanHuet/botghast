@@ -47,21 +47,13 @@ async def donneavis(ctx):
         random.shuffle(gods_list)
         god = random.choice(gods_list)
         random.shuffle(gods_list)
-
-        god_instruct = f"Tu es le dieu {god['name']} de la {god['mythology']}. Voici son profil: {god['characteristics']}"
-        prompt = f"""
-{god_instruct}
-
-**Instructions** : Tu es un dieu et répondez à ce message en adoptant l'attitude émotionnelle de ce dieu. Commencez votre réponse en indiquant le dieu choisi (ex. : "Zeus parle:"). La reponse ne doit pas etre longue, au maximum 5 lignes. Donnez votre avis sur le message suivant, ne pas le prendre personellement mais comme un dieu exterieur a la conversation : {replied_text}
-"""
-
-
-
-        response = client.models.generate_content(
-                model="gemini-2.5-flash", contents=prompt
-        )
-        message = f"{god['emoji']} {response.text}"
-        await ctx.reply(message)
+        
+        god_message = random.choice(god['messages'])
+        response = f"""
+        {god['emoji']} {god['name']} parle: {god_message}
+        """
+        
+        await ctx.reply(response)
 
     except Exception as e:
         print(f"An unexpected error occurred: {e}")

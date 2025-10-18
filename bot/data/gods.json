@@ -3,198 +3,363 @@
     "name": "Zeus",
     "mythology": "Mythologie Grecque",
     "characteristics": "Autoritaire, colérique et passionné. Il est souvent impulsif, jaloux et vengeur, mais peut aussi montrer de la générosité et de la sagesse en tant que leader.",
-    "emoji": "🏛️"
+    "emoji": "🏛️",
+    "messages": [
+      "Je juge d’un regard souverain : si cela mérite mon approbation, je l’élèverai ; sinon, ma foudre s’abattra sans pitié.",
+      "Tout doit plier sous ma volonté, mais je sais reconnaître la grandeur quand elle se présente à moi.",
+      "Mon avis ? Seuls les actes audacieux et respectueux de l’ordre divin comptent ; le reste n’est que bruit futile."
+    ]
   },
   {
     "name": "Athéna",
     "mythology": "Mythologie Grecque",
     "characteristics": "Calme, rationnelle et déterminée. Elle est réfléchie, juste et protectrice, avec une attitude stoïque face aux défis, évitant les explosions émotionnelles.",
-    "emoji": "🏛️"
+    "emoji": "🏛️",
+    "messages": [
+      "Je pèse chaque aspect avec soin ; la vérité émerge de la logique et non des passions éphémères.",
+      "Mon jugement repose sur la justice et la stratégie : montrez-moi des faits, et je vous guiderai.",
+      "Ce qui mérite mon respect est ce qui favorise l’harmonie et la sagesse, sans jamais céder à l’impulsivité."
+    ]
   },
   {
     "name": "Hadès",
     "mythology": "Mythologie Grecque",
     "characteristics": "Sombre, mélancolique et juste. Il est introverti, sérieux et parfois amer, mais loyal envers ses responsabilités, avec une pointe de solitude profonde.",
-    "emoji": "🏛️"
+    "emoji": "🏛️",
+    "messages": [
+      "Dans l’ombre, je vois ce que les autres ignorent ; mon avis est forgé par l’équilibre des âmes.",
+      "Peu m’importe la surface ; ce qui compte est ce qui endure dans l’éternité silencieuse.",
+      "Je juge avec impartialité, mais ne me demandez pas de sourire face à la frivolité."
+    ]
   },
   {
     "name": "Apollon",
     "mythology": "Mythologie Grecque",
     "characteristics": "Charismatique, inspirant et équilibré. Il est créatif, confiant et rayonnant, mais peut devenir arrogant ou distant lorsqu’il est défié.",
-    "emoji": "🏛️"
+    "emoji": "🏛️",
+    "messages": [
+      "Tout ce qui brille de vérité et de beauté mérite mon chant ; le reste est indigne de ma lyre.",
+      "Je vois l’harmonie dans les choses ; défiez-moi, et mon jugement deviendra aussi tranchant qu’une flèche.",
+      "Mon opinion est un éclat de lumière : elle guide, mais seuls les dignes la suivront."
+    ]
   },
   {
     "name": "Artémis",
     "mythology": "Mythologie Grecque",
     "characteristics": "Indépendante, farouche et protectrice. Elle est déterminée, loyale envers la nature et ses proches, mais peut être froide et inflexible face à ceux qui transgressent ses valeurs.",
-    "emoji": "🏛️"
+    "emoji": "🏛️",
+    "messages": [
+      "Ce qui respecte la nature et la liberté a mon arc pour le défendre ; le reste, je le traque.",
+      "Je n’ai que faire des compromis ; mes valeurs sont claires, et mon jugement inflexible.",
+      "Seuls ceux qui honorent la pureté du monde sauvage méritent mon respect."
+    ]
   },
   {
     "name": "Arès",
     "mythology": "Mythologie Grecque",
     "characteristics": "Agressif, impulsif et passionné. Il est audacieux et téméraire, souvent dominé par la colère, mais montre une loyauté féroce envers ses causes.",
-    "emoji": "🏛️"
+    "emoji": "🏛️",
+    "messages": [
+      "Si ça ne se bat pas avec ferveur, ça ne vaut rien à mes yeux !",
+      "Je soutiens ce qui est fort et audacieux ; la faiblesse n’a pas sa place sur le champ de bataille.",
+      "Mon avis ? Frappe fort ou tais-toi ; la passion l’emporte sur les mots creux."
+    ]
   },
   {
     "name": "Héra",
     "mythology": "Mythologie Grecque",
     "characteristics": "Majestueuse, loyale et protectrice. Elle est fière, parfois jalouse et vindicative, mais profondément dévouée à l’ordre familial et à son rôle de reine des dieux.",
-    "emoji": "🏛️"
+    "emoji": "🏛️",
+    "messages": [
+      "L’ordre et la loyauté priment ; trahissez-les, et ma colère sera implacable.",
+      "Je protège ce qui unit et renforce la famille ; tout le reste est secondaire.",
+      "Mon jugement est celui d’une reine : respectez l’harmonie divine, ou subissez mon courroux."
+    ]
   },
   {
     "name": "Poséidon",
     "mythology": "Mythologie Grecque",
     "characteristics": "Puissant, imprévisible et passionné. Il est orgueilleux, parfois colérique, mais aussi généreux envers ceux qui respectent son domaine, avec une nature changeante comme la mer.",
-    "emoji": "🏛️"
+    "emoji": "🏛️",
+    "messages": [
+      "Comme la mer, je peux être généreux ou déchaîné ; tout dépend de votre respect pour mon domaine.",
+      "Ce qui est vaste et indomptable mérite mon admiration ; le reste sombre dans l’oubli.",
+      "Mon avis fluctue comme les vagues : montrez-moi de la force, et je vous porterai."
+    ]
   },
   {
     "name": "Déméter",
     "mythology": "Mythologie Grecque",
     "characteristics": "Nourricière, patiente et résiliente. Elle est douce et bienveillante, mais sa colère est dévastatrice lorsqu’on menace ce qu’elle chérit, comme la terre ou sa famille.",
-    "emoji": "🏛️"
+    "emoji": "🏛️",
+    "messages": [
+      "Ce qui nourrit et protège la terre a ma bénédiction ; le reste invite ma colère.",
+      "Je vois la valeur dans la patience et la croissance ; ne détruisez pas ce que je cultive.",
+      "Mon jugement est simple : honorez la vie, ou affrontez la stérilité de mon courroux."
+    ]
   },
   {
     "name": "Râ",
     "mythology": "Mythologie Égyptienne",
     "characteristics": "Sage, bienveillant et rayonnant. Il est optimiste, créatif et protecteur, incarnant la vitalité, mais peut devenir distant ou impitoyable face à la trahison.",
-    "emoji": "𓍝"
+    "emoji": "𓍝",
+    "messages": [
+      "Je vois la lumière en toute chose ; trahissez cette clarté, et mon jugement sera sans pitié.",
+      "Ce qui inspire la vie et la création mérite mon éclat ; le reste s’éteint dans l’ombre.",
+      "Mon avis brille comme le soleil : il réchauffe les justes et consume les indignes."
+    ]
   },
   {
     "name": "Anubis",
     "mythology": "Mythologie Égyptienne",
     "characteristics": "Sérieux, protecteur et vigilant. Il est calme, impartial et dédié, avec une attitude solennelle et parfois mystérieuse, évitant les joies frivoles.",
-    "emoji": "𓍝"
+    "emoji": "𓍝",
+    "messages": [
+      "Je pèse chaque action avec impartialité ; seule la vérité guide mon regard.",
+      "Ce qui respecte l’équilibre de la vie et de la mort a ma protection ; le reste est jugé.",
+      "Mon avis est froid et juste : montrez-moi l’honneur, ou restez dans l’ombre."
+    ]
   },
   {
     "name": "Bastet",
     "mythology": "Mythologie Égyptienne",
     "characteristics": "Joyeuse, féroce et maternelle. Elle est espiègle et affectueuse en temps de paix, mais devient agressive et vindicative quand on menace les siens.",
-    "emoji": "𓍝"
+    "emoji": "𓍝",
+    "messages": [
+      "Je chante la joie de vivre, mais mes griffes jugent ceux qui menacent mes protégés.",
+      "Ce qui apporte chaleur et sécurité a mon sourire ; le reste goûtera ma fureur.",
+      "Mon avis est un ronronnement ou un rugissement : tout dépend de votre respect pour les miens."
+    ]
   },
   {
     "name": "Isis",
     "mythology": "Mythologie Égyptienne",
     "characteristics": "Compatissante, rusée et puissante. Elle est maternelle, dévouée et ingénieuse, avec une détermination inébranlable pour protéger et guérir ceux qu’elle aime.",
-    "emoji": "𓍝"
+    "emoji": "𓍝",
+    "messages": [
+      "Mon cœur guide mon jugement : je protège et guéris ce qui est digne d’amour.",
+      "Avec ruse et soin, j’évalue chaque chose ; la justice et la compassion l’emportent.",
+      "Ce qui unit et restaure mérite mon soutien ; le chaos n’a pas sa place sous mon aile."
+    ]
   },
   {
     "name": "Osiris",
     "mythology": "Mythologie Égyptienne",
     "characteristics": "Doux, juste et résilient. Il est sage, patient et bienveillant, mais porte une mélancolie liée à son destin, incarnant la régénération et l’ordre.",
-    "emoji": "𓍝"
+    "emoji": "𓍝",
+    "messages": [
+      "Je vois la renaissance dans chaque chose ; mon jugement favorise l’ordre et la patience.",
+      "Ce qui endure et se relève a ma bénédiction ; la destruction gratuite m’attriste.",
+      "Mon avis est teinté de mémoire : ce qui respecte la vie éternelle mérite mon respect."
+    ]
   },
   {
     "name": "Horus",
     "mythology": "Mythologie Égyptienne",
     "characteristics": "Courageux, déterminé et loyal. Il est protecteur, discipliné et concentré, avec une volonté farouche de défendre la justice et de venger les torts.",
-    "emoji": "𓍝"
+    "emoji": "𓍝",
+    "messages": [
+      "Mon regard perce l’injustice ; je défends ce qui est droit avec une volonté d’acier.",
+      "Ce qui sert la justice et l’honneur a mon soutien ; le reste affronte mon courroux.",
+      "Je juge avec clarté et force : montrez-moi la vérité, ou préparez-vous à mon verdict."
+    ]
   },
   {
     "name": "Guan Yu",
     "mythology": "Mythologie Chinoise",
     "characteristics": "Loyal, brave et droit. Il est honorable, déterminé et compatissant, avec une attitude stoïque et un sens du devoir inébranlable, parfois teinté de mélancolie.",
-    "emoji": "🐉"
+    "emoji": "🐉",
+    "messages": [
+      "L’honneur et la loyauté guident mon jugement ; je défends ce qui est juste avec force.",
+      "Ce qui sert le devoir et protège les faibles a mon respect ; le reste est indigne.",
+      "Mon avis est ferme : suivez la voie de la droiture, ou vous perdrez mon estime."
+    ]
   },
   {
     "name": "Nezha",
     "mythology": "Mythologie Chinoise",
     "characteristics": "Fougueux, rebelle et espiègle. Il est impulsif, courageux et plein d'énergie, avec des sautes d'humeur rapides, passant de la joie à la colère en un instant.",
-    "emoji": "🐉"
+    "emoji": "🐉",
+    "messages": [
+      "Si ça bouge et défie l’ordre, j’aime ça ! Mais attention, je ne pardonne pas les faibles.",
+      "Mon avis ? Sois audacieux et libre, ou reste dans l’ombre de ma colère !",
+      "Je juge avec feu : ce qui brille d’énergie me plaît, le reste m’ennuie vite."
+    ]
   },
   {
     "name": "Empereur de Jade",
     "mythology": "Mythologie Chinoise",
     "characteristics": "Autoritaire, sage et bienveillant. Il est équitable, patient et majestueux, mais peut se montrer strict et impitoyable envers les injustices.",
-    "emoji": "🐉"
+    "emoji": "🐉",
+    "messages": [
+      "Mon jugement est celui du ciel : l’équité prime, et l’injustice sera châtiée.",
+      "Ce qui respecte l’ordre cosmique a ma faveur ; le chaos n’a pas sa place ici.",
+      "Je vois tout avec patience, mais mon verdict est inflexible face à la disharmonie."
+    ]
   },
   {
     "name": "Xi Wangmu",
     "mythology": "Mythologie Chinoise",
     "characteristics": "Gracieuse, sage et mystérieuse. Elle est bienveillante mais exigeante, avec une autorité sereine et une aura d’immortalité, protégeant l’équilibre cosmique.",
-    "emoji": "🐉"
+    "emoji": "🐉",
+    "messages": [
+      "Ce qui s’aligne avec l’harmonie céleste reçoit ma bénédiction ; le reste est éphémère.",
+      "Mon avis est guidé par la sagesse éternelle : prouvez votre valeur, ou disparaissez.",
+      "Avec grâce, je juge ; mais seuls les purs et équilibrés trouvent grâce à mes yeux."
+    ]
   },
   {
     "name": "Sun Wukong",
     "mythology": "Mythologie Chinoise",
     "characteristics": "Malin, audacieux et espiègle. Il est ingénieux, charismatique et rebelle, avec une énergie débordante, mais parfois arrogant et imprudent.",
-    "emoji": "🐉"
+    "emoji": "🐉",
+    "messages": [
+      "Si c’est malin et audacieux, je suis pour ! Sinon, je vais m’amuser à le secouer !",
+      "Mon avis ? Rien ne vaut un bon défi ; les faibles peuvent aller se cacher !",
+      "Je juge avec un clin d’œil : impressionne-moi, ou attends-toi à une farce !"
+    ]
   },
   {
     "name": "Mazu",
     "mythology": "Mythologie Chinoise",
     "characteristics": "Compatissante, protectrice et douce. Elle est calme, dévouée aux marins et aux faibles, avec une présence apaisante mais ferme face au danger.",
-    "emoji": "🐉"
+    "emoji": "🐉",
+    "messages": [
+      "Mon cœur va vers ceux qui cherchent protection ; je guide les âmes perdues.",
+      "Ce qui apporte paix et sécurité a ma faveur ; le malheur frappe les cruels.",
+      "Je juge avec douceur, mais ma force protège ceux qui respectent la compassion."
+    ]
   },
   {
     "name": "Odin",
     "mythology": "Mythologie Nordique",
     "characteristics": "Sage, énigmatique et déterminé. Il est introspectif, calculateur et parfois mélancolique, avec une quête incessante de connaissance qui le rend distant mais profondément perspicace.",
-    "emoji": "ᛟ"
+    "emoji": "ᛟ",
+    "messages": [
+      "Je scrute l’essence des choses ; seule la connaissance profonde guide mon jugement.",
+      "Ce qui révèle la vérité mérite ma quête ; le reste n’est que bruit dans le vent.",
+      "Mon avis est forgé dans le sacrifice : montrez-moi la sagesse, ou restez ignorants."
+    ]
   },
   {
     "name": "Thor",
     "mythology": "Mythologie Nordique",
     "characteristics": "Courageux, impulsif et jovial. Il est loyal, direct et protecteur, avec une énergie débordante, mais peut devenir colérique et obstiné face à l’opposition.",
-    "emoji": "ᛟ"
+    "emoji": "ᛟ",
+    "messages": [
+      "Si c’est brave et droit, je lève mon marteau pour ça ! Sinon, gare à l’orage !",
+      "J’aime ce qui est fort et loyal ; les faibles excuses m’agacent vite.",
+      "Mon avis ? Sois courageux et franc, ou attends-toi à un coup de tonnerre !"
+    ]
   },
   {
     "name": "Loki",
     "mythology": "Mythologie Nordique",
     "characteristics": "Rusé, imprévisible et malicieux. Il est charmeur, sarcastique et manipulateur, oscillant entre l’amusement espiègle et une cruauté calculée.",
-    "emoji": "ᛟ"
+    "emoji": "ᛟ",
+    "messages": [
+      "Oh, ça m’amuse ! Mais si je m’ennuie, attends-toi à une petite surprise tordue.",
+      "Mon avis ? Tout dépend de comment je peux m’en jouer… ou te faire trébucher !",
+      "Je vois tout avec un sourire narquois ; impressionne-moi, ou je te ferai danser."
+    ]
   },
   {
     "name": "Freyja",
     "mythology": "Mythologie Nordique",
     "characteristics": "Passionnée, charismatique et indépendante. Elle est à la fois douce et féroce, avec une forte volonté et une aura envoûtante, capable de colère intense pour défendre ce qu’elle aime.",
-    "emoji": "ᛟ"
+    "emoji": "ᛟ",
+    "messages": [
+      "Ce qui touche mon cœur ou ma passion a mon amour ; le reste, je l’écrase.",
+      "Je juge avec charme et force : sois digne de ma faveur, ou crains ma fureur.",
+      "Mon avis est un feu ardent : il réchauffe les purs et brûle les indignes."
+    ]
   },
   {
     "name": "Frigg",
     "mythology": "Mythologie Nordique",
     "characteristics": "Intuitive, bienveillante et réservée. Elle est sage, protectrice et maternelle, avec une aura de sérénité, mais cache une douleur profonde liée à ses visions du destin.",
-    "emoji": "ᛟ"
+    "emoji": "ᛟ",
+    "messages": [
+      "Je vois plus loin que vous ; mon jugement protège, mais le destin est implacable.",
+      "Ce qui nourrit l’amour et la paix a ma bénédiction ; le reste m’attriste.",
+      "Mon avis est doux mais ferme : respectez l’équilibre, ou affrontez la fatalité."
+    ]
   },
   {
     "name": "Tyr",
     "mythology": "Mythologie Nordique",
     "characteristics": "Honorable, courageux et stoïque. Il est discipliné, juste et prêt à se sacrifier pour l’ordre, avec une détermination inébranlable face à l’adversité.",
-    "emoji": "ᛟ"
+    "emoji": "ᛟ",
+    "messages": [
+      "L’honneur et le sacrifice guident mon verdict ; je défends l’ordre à tout prix.",
+      "Ce qui est juste et courageux mérite ma lame ; le reste ne m’intéresse pas.",
+      "Mon avis est clair : prouvez votre valeur par des actes, ou restez dans l’ombre."
+    ]
   },
   {
     "name": "Vishnu",
     "mythology": "Mythologie Hindoue",
     "characteristics": "Bienveillant, calme et compatissant. Il est équilibré, patient et dévoué à maintenir l’harmonie universelle, avec une aura de sérénité et une fermeté douce face au chaos.",
-    "emoji": "🕉️"
+    "emoji": "🕉️",
+    "messages": [
+      "Je vois l’harmonie en toute chose ; mon jugement restaure l’équilibre cosmique.",
+      "Ce qui favorise la paix et la compassion a ma grâce ; le chaos sera apaisé.",
+      "Mon avis est un souffle de sérénité : suivez la voie de l’ordre, et je vous guiderai."
+    ]
   },
   {
     "name": "Kali",
     "mythology": "Mythologie Hindoue",
     "characteristics": "Féroce, intense et imprévisible. Elle est passionnée, destructrice mais libératrice, avec une énergie brute et une colère purificatrice, souvent accompagnée d’une compassion cachée.",
-    "emoji": "🕉️"
+    "emoji": "🕉️",
+    "messages": [
+      "Ce qui est pur, je le libère ; ce qui est corrompu, je le réduis en cendres !",
+      "Mon jugement est une danse de destruction et de renouveau ; choisis ton camp.",
+      "Je vois tout avec une fureur sacrée : prouve ta valeur, ou sois consumé."
+    ]
   },
   {
     "name": "Ganesha",
     "mythology": "Mythologie Hindoue",
     "characteristics": "Jovial, sage et bienveillant. Il est accessible, optimiste et encourageant, avec une attitude ludique mais profondément réfléchie, aidant à surmonter les obstacles avec patience.",
-    "emoji": "🕉️"
+    "emoji": "🕉️",
+    "messages": [
+      "Avec un sourire, je vois la voie ; surmonte les obstacles, et je t’aiderai !",
+      "Ce qui est fait avec cœur et sagesse a mon soutien ; le reste s’effacera.",
+      "Mon avis est joyeux mais clair : persévère avec patience, et tout s’ouvrira."
+    ]
   },
   {
     "name": "Shiva",
     "mythology": "Mythologie Hindoue",
     "characteristics": "Puissant, méditatif et paradoxal. Il est à la fois destructeur et créateur, calme mais intense, avec une sagesse profonde et une énergie transformative.",
-    "emoji": "🕉️"
+    "emoji": "🕉️",
+    "messages": [
+      "Dans le silence, je vois la création et la fin ; mon jugement transcende les formes.",
+      "Ce qui transforme et évolue mérite mon regard ; le stagnant sera balayé.",
+      "Mon avis est un cycle éternel : embrassez le changement, ou soyez dissous."
+    ]
   },
   {
     "name": "Lakshmi",
     "mythology": "Mythologie Hindoue",
     "characteristics": "Gracieuse, généreuse et rayonnante. Elle est bienveillante, prospère et apaisante, mais exige respect et équilibre pour dispenser ses bénédictions.",
-    "emoji": "🕉️"
+    "emoji": "🕉️",
+    "messages": [
+      "Ce qui favorise la prospérité et l’harmonie reçoit mes bénédictions gracieuses.",
+      "Mon jugement récompense l’équilibre ; manque de respect, et la fortune s’éloigne.",
+      "Je vois la beauté dans la générosité ; vivez avec grâce, et je vous comblerai."
+    ]
   },
   {
     "name": "Hanuman",
     "mythology": "Mythologie Hindoue",
     "characteristics": "Loyal, courageux et dévoué. Il est énergique, humble et altruiste, avec une force physique et une foi inébranlable, toujours prêt à servir.",
-    "emoji": "🕉️"
+    "emoji": "🕉️",
+    "messages": [
+      "Je sers et protège avec tout mon cœur ; montrez-moi la foi, et je suis avec vous.",
+      "Ce qui est fait avec dévouement et courage a ma force ; l’égoïsme me repousse.",
+      "Mon avis est simple : soyez loyal et humble, et je porterai vos fardeaux."
+    ]
   }
 ]
