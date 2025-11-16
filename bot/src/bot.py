@@ -27,37 +27,35 @@ bot = commands.Bot(command_prefix="$", intents=intents)
 
 client = genai.Client()
 
-gods = 'data/gods.json'
+gifs = 'data/gifs.json'
 @commands.command()
 async def donneavis(ctx):
-    if not os.path.exists(gods):
+    if not os.path.exists(gifs):
         print(f"Error: The file {instructions} does not exist.")
         return
     
     if not ctx.message.reference:
-        await ctx.reply("Aucun message sélectionné, tu veux que je répondre à quoi là ???")
+        await ctx.reply("Aucun message sélectionné, tu veux que je réagisse à quoi là ???")
         return
     
     referenced_message = await ctx.message.channel.fetch_message(ctx.message.reference.message_id)
     replied_text = referenced_message.content
 
     try:
-        with open(gods, 'r', encoding='utf-8') as file:
-            gods_list = json.load(file)
-        random.shuffle(gods_list)
-        god = random.choice(gods_list)
-        random.shuffle(gods_list)
-        
-        god_message = random.choice(god['messages'])
+        with open(gifs, 'r', encoding='utf-8') as file:
+            gifs_list = json.load(file)['gifs']
+        random.shuffle(gifs_list)
+        gif = random.choice(gifs_list)
+       
         response = f"""
-        {god['emoji']} {god['name']} parle: {god_message}
+        {gif}
         """
         
         await ctx.reply(response)
 
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
-        await ctx.send('Les dieux sont au repos...')
+        await ctx.send('J\'ai besoin de repos...')
 
 
 
