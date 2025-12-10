@@ -51,7 +51,7 @@ async def donneavis(ctx):
         {gif}
         """
         
-        await ctx.reply(response)
+        await referenced_message.reply(response)
 
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
