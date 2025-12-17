@@ -27,7 +27,7 @@ bot = commands.Bot(command_prefix="$", intents=intents)
 
 client = genai.Client()
 
-gifs = 'data/gifs.json'
+gifs = os.getenv('GIFS_FILE', 'data/gifs.json')
 @commands.command()
 async def donneavis(ctx):
     if not os.path.exists(gifs):
@@ -59,7 +59,7 @@ async def donneavis(ctx):
 
 
 
-quotes = 'data/quotes.json'
+quotes = os.getenv('QUOTES_FILE', 'data/quotes.json')
 @commands.command()
 async def citation(ctx):
     if not os.path.exists(quotes):
