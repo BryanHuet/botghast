@@ -22,6 +22,8 @@ venv/bin/pip install -r requirements.txt
 Create in the root folder a **.env** file such as
 ```.env
 DISCORD_TOKEN=token-bot-discord-api
+GIFS_FILE=path-to-custom-gifs-file
+QUOTES_FILE=path-to-custom-quotes-file
 ```
 
 ## Execution
