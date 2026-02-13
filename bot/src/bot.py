@@ -20,11 +20,11 @@ import random
 import datetime
 import pytz
 from discord.ext import commands
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 from setproctitle import setproctitle
 
 setproctitle("BotGhast")
-#load_dotenv()
+load_dotenv()
 
 # Custom formatter for Europe/Paris timezone
 class ParisTimeFormatter(logging.Formatter):
