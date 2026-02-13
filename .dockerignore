@@ -1,0 +1,34 @@
+# Docker ignore file for security and performance
+
+# Ignore git directory
+.git
+.gitignore
+
+# Ignore Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore IDE files
+.idea/
+.vscode/
+*.swp
+
+# Ignore virtual environment
+venv/
+.env
+
+# Ignore build artifacts
+*.log
+dist/
+build/
+
+# Ignore personal files
+*.md
+README.md
+LICENSE
+
+# Ignore Docker files that shouldn't be copied
+Dockerfile
+Dockerfile.*
+.dockerignore

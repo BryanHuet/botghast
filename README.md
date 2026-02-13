@@ -31,3 +31,11 @@ QUOTES_FILE=path-to-custom-quotes-file
 venv/bin/python bot/src/bot.py
 ```
 
+## Docker
+```bash
+docker build -t botghast && docker run --env-file .env botghast
+```
+
+
+
+
