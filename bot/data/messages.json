@@ -1,0 +1,116 @@
+{
+  "style": {
+    "colors": {
+      "music": "#5865F2",
+      "error": "#ED4245"
+    },
+    "queue_preview_size": 10,
+    "max_label_length": 90,
+    "search_results": 3
+  },
+  "common": {
+    "server_only": "Cette commande ne fonctionne que sur un serveur.",
+    "quote": "{citation} ~ {author}",
+    "quotes_file_missing": "Le fichier de citations est introuvable.",
+    "no_quotes": "Aucune citation disponible."
+  },
+  "aide": {
+    "title": "**BotGhast Aide** - Préfixe de commande: `{prefix}`",
+    "line": "{prefix}{usage} - {description}",
+    "commands": [
+      {"usage": "aide", "description": "Afficher ce message d'aide"},
+      {"usage": "donneavis", "description": "Répondre à un message avec un GIF aléatoire"},
+      {"usage": "citation", "description": "Obtenir une citation philosophique aléatoire"},
+      {"usage": "cherchecitation <mot-clé>", "description": "Rechercher des citations par mot-clé"},
+      {"usage": "joue <lien YouTube>", "description": "Jouer une vidéo ou une playlist YouTube en vocal (ajout en file si un titre est en cours)"},
+      {"usage": "viking", "description": "Jouer la playlist viking"},
+      {"usage": "suivant", "description": "Passer au titre suivant"},
+      {"usage": "file", "description": "Afficher le titre en cours et la file d'attente"},
+      {"usage": "stop", "description": "Arrêter la musique, vider la file et quitter le salon vocal"}
+    ],
+    "footer": "Utilisez `{prefix}aide` pour voir cette liste à tout moment !"
+  },
+  "donneavis": {
+    "gifs_file_missing": "Le fichier de GIFs est introuvable.",
+    "no_reference": "Aucun message sélectionné, tu veux que je réagisse à quoi là ???",
+    "reference_inaccessible": "Le message référencé n'existe pas ou n'est pas accessible.",
+    "reference_not_found": "Le message référencé n'a pas été trouvé.",
+    "reference_forbidden": "Je n'ai pas la permission d'accéder à ce message.",
+    "reference_error": "Une erreur est survenue lors de la récupération du message.",
+    "response": "{gif}",
+    "error": "J'ai besoin de repos..."
+  },
+  "citation": {
+    "json_error": "Erreur de format dans le fichier de citations.",
+    "error": "Une erreur est survenue lors de la récupération de la citation."
+  },
+  "cherchecitation": {
+    "no_keyword": "Veuillez fournir un mot-clé de recherche.",
+    "no_result": "Aucune citation trouvée pour '{keyword}'.",
+    "header": "**Résultats pour '{keyword}':**",
+    "result": "{index}. {quote}",
+    "more": "... et {count} autres résultats.",
+    "error": "Erreur lors de la recherche de citations."
+  },
+  "voice": {
+    "not_in_voice": "Tu dois être dans un salon vocal pour que je puisse te rejoindre.",
+    "no_ffmpeg": "ffmpeg n'est pas installé sur le serveur du bot, impossible de lire de l'audio.",
+    "join_forbidden": "Je n'ai pas la permission de rejoindre ce salon vocal.",
+    "join_error": "Je n'arrive pas à rejoindre le salon vocal.",
+    "left_empty": "Plus personne dans le salon vocal, je m'en vais.",
+    "track_error": "Impossible de lire {track}, je passe au suivant."
+  },
+  "embeds": {
+    "requested_by": "Demandé par {name}",
+    "done_by": "Par {name}",
+    "duration": "Durée",
+    "unknown_duration": "Inconnue",
+    "channel": "Chaîne",
+    "position": "Position",
+    "total_duration": "Durée totale",
+    "now_playing": "Lecture en cours",
+    "up_next": "À suivre",
+    "up_next_more": "+ {count} autre(s) dans la file",
+    "queued": "Ajouté à la file",
+    "playlist_added": "Playlist {source} ajoutée",
+    "playlist_tracks": "**{count}** titres ajoutés à la file.",
+    "playlist_tracks_shuffled": "**{count}** titres ajoutés à la file en ordre aléatoire.",
+    "queue_title": "File d'attente",
+    "queue_current": "En cours",
+    "queue_next_header": "**À suivre**",
+    "queue_line": "`{index:>2}.` {track}",
+    "queue_more": "*... et {count} autre(s)*",
+    "queue_empty": "*Aucun titre à suivre.*",
+    "queue_footer": "{count} titre(s) en attente",
+    "queue_footer_duration": "{count} titre(s) en attente · {duration}"
+  },
+  "joue": {
+    "no_url": "Donne-moi un lien YouTube : `{prefix}joue <lien>`",
+    "empty_playlist": "Cette playlist est vide ou ses vidéos sont inaccessibles.",
+    "download_error": "Impossible de lire ce lien (vidéo ou playlist invalide, privée ou restreinte ?).",
+    "client_error": "Je n'arrive pas à lancer la lecture.",
+    "error": "Une erreur est survenue lors de la lecture de la vidéo."
+  },
+  "viking": {
+    "no_playlist": "Donne-moi un lien de playlist Spotify : `{prefix}viking <lien>`",
+    "empty_playlist": "Cette playlist est vide, ou Spotify ne me donne pas accès à ses titres (seules les playlists du compte connecté sont lisibles).",
+    "api_error": "Impossible de récupérer la playlist Spotify (identifiants invalides ou playlist inaccessible).",
+    "error": "Une erreur est survenue lors du chargement de la playlist."
+  },
+  "suivant": {
+    "nothing_playing": "Rien n'est en cours de lecture.",
+    "skipped": "Titre passé",
+    "skipped_track": "Titre passé : {track}",
+    "queue_empty": "La file est vide.",
+    "error": "Une erreur est survenue en passant le titre."
+  },
+  "file": {
+    "empty": "La file est vide. Lance un titre avec `{prefix}joue <lien>`.",
+    "error": "Une erreur est survenue en affichant la file."
+  },
+  "stop": {
+    "not_connected": "Je ne suis connecté à aucun salon vocal.",
+    "stopped": "Musique arrêtée, je quitte le salon vocal.",
+    "error": "Une erreur est survenue en quittant le salon vocal."
+  }
+}
