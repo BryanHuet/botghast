@@ -22,9 +22,11 @@ venv/bin/pip install -r requirements.txt
 Create in the root folder a **.env** file such as
 ```.env
 DISCORD_TOKEN=token-bot-discord-api
+BOT_PREFIX=?
 GIFS_FILE=path-to-custom-gifs-file
 QUOTES_FILE=path-to-custom-quotes-file
 ```
+`BOT_PREFIX` defaults to `?`. The Spotify variables used by `?viking` are listed in `.env.example` (see [Spotify setup](#spotify-setup)).
 
 ## Execution
 ```bash
@@ -39,3 +41,34 @@ docker build -t botghast && docker run --env-file .env botghast
 
 
 
+
+## Commands
+| Command | Description |
+|---|---|
+| `?aide` | Show the list of commands |
+| `?donneavis` | Reply to a message with this command: the bot answers it with a random GIF |
+| `?citation` | Send a random philosophical quote |
+| `?cherchecitation <keyword>` | Search quotes by keyword (quote text or author), first 3 results |
+
+### Voice commands
+| Command | Description |
+|---|---|
+| `?joue <youtube-url>` | Play a YouTube video or playlist (URL with `list=`), or add it to the queue if a track is already playing |
+| `?viking [playlist-url]` | Queue a Spotify playlist in random order (defaults to `SPOTIFY_PLAYLIST`) |
+| `?suivant` | Skip to the next track |
+| `?file` | Show the current track and the next ones |
+| `?arrete` | Stop, clear the queue and leave the voice channel |
+
+They require [FFmpeg](https://ffmpeg.org/) available in the `PATH` (e.g. `winget install ffmpeg`, `apt install ffmpeg`, `apk add ffmpeg`). The Docker image does not install it yet.
+
+### Spotify setup
+Audio is not streamed from Spotify: the bot reads the track names with the Spotify Web API, then plays each track from YouTube.
+Since March 2026, Spotify apps in development mode only return the tracks of playlists **owned by the authorized account**, and the app owner needs a **Premium** subscription.
+
+1. Create an app on the [Spotify dashboard](https://developer.spotify.com/dashboard) (Web API), with the redirect URI `http://127.0.0.1:8888/callback`.
+2. Add `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET` to `.env`.
+3. Run once, log in with the account owning the playlist and copy the printed line into `.env`:
+```bash
+venv/bin/python bot/src/spotify_auth.py
+```
+4. Optionally set `SPOTIFY_PLAYLIST` (URL or ID) to play it with a bare `?viking`.
