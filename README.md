@@ -65,7 +65,7 @@ docker build -t botghast && docker run --env-file .env botghast
 | `?viking [playlist-url]` | Queue a Spotify playlist in random order (defaults to `SPOTIFY_PLAYLIST`) |
 | `?suivant` | Skip to the next track |
 | `?file` | Show the current track and the next ones |
-| `?arrete` | Stop, clear the queue and leave the voice channel |
+| `?stop` | Stop, clear the queue and leave the voice channel |
 
 They require [FFmpeg](https://ffmpeg.org/) available in the `PATH` (e.g. `winget install ffmpeg`, `apt install ffmpeg`, `apk add ffmpeg`). The Docker image does not install it yet.
 

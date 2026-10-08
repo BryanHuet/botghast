@@ -20,7 +20,7 @@ Le texte est **écrit à la main** : il n'est pas généré depuis les commandes
 2. Comparer avec les lignes `{PREFIX}...` de `help_text`, et avec le tableau des commandes du `README.md`.
 3. Une ligne par commande, format `{PREFIX}<nom> <args> - <description FR>` ; arguments obligatoires en `<...>`, optionnels en `[...]`.
 
-Commandes attendues actuellement : `aide`, `donneavis`, `citation`, `cherchecitation`, `joue`, `viking`, `suivant`, `file`, `arrete`.
+Commandes attendues actuellement : `aide`, `donneavis`, `citation`, `cherchecitation`, `joue`, `viking`, `suivant`, `file`, `stop`.
 
 ## Pièges
 

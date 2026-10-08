@@ -24,7 +24,7 @@ Bot Discord personnel (discord.py, commandes à préfixe) qui envoie des GIFs et
 | `viking [playlist]` | Met en file une playlist Spotify (défaut `SPOTIFY_PLAYLIST`), lue depuis YouTube |
 | `suivant` | Passe au titre suivant |
 | `file` | Titre en cours + file d'attente |
-| `arrete` | Stoppe, vide la file, quitte le vocal |
+| `stop` | Stoppe, vide la file, quitte le vocal |
 
 Chaque commande a un skill dédié `/cmd-<commande>` (déroulé, pièges, vérification).
 
@@ -61,4 +61,4 @@ Chaque commande a un skill dédié `/cmd-<commande>` (déroulé, pièges, vérif
 - `/add-command` — ajouter une commande Discord selon les conventions
 - `/manage-data` — ajouter/valider des GIFs et citations
 - `/lint` — reproduire les vérifications de la CI
-- `/cmd-aide`, `/cmd-donneavis`, `/cmd-citation`, `/cmd-cherchecitation`, `/cmd-joue` (+ pipeline audio), `/cmd-viking`, `/cmd-suivant`, `/cmd-file`, `/cmd-arrete` — une commande chacun
+- `/cmd-aide`, `/cmd-donneavis`, `/cmd-citation`, `/cmd-cherchecitation`, `/cmd-joue` (+ pipeline audio), `/cmd-viking`, `/cmd-suivant`, `/cmd-file`, `/cmd-stop` — une commande chacun
