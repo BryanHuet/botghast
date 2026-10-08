@@ -2,7 +2,8 @@
 Personal Bot Discord
 
 ## Requirements
-- Python >= 3.8
+- Python >= 3.10
+- [FFmpeg](https://ffmpeg.org/) for the voice commands
 
 ## Installation
 1. Clone this repository to your local machine:
@@ -25,8 +26,9 @@ DISCORD_TOKEN=token-bot-discord-api
 BOT_PREFIX=?
 GIFS_FILE=path-to-custom-gifs-file
 QUOTES_FILE=path-to-custom-quotes-file
+MESSAGES_FILE=path-to-custom-messages-file
 ```
-`BOT_PREFIX` defaults to `?`. The Spotify variables used by `?viking` are listed in `.env.example` (see [Spotify setup](#spotify-setup)).
+`BOT_PREFIX` defaults to `?`. The data files default to `bot/data/gifs.json`, `bot/data/quotes.json` and `bot/data/messages.json`, whatever the working directory. The Spotify variables used by `?viking` are listed in `.env.example` (see [Spotify setup](#spotify-setup)).
 
 ## Execution
 ```bash
@@ -36,19 +38,24 @@ venv/bin/python bot/src/bot.py
 ## Tests
 ```bash
 venv/bin/pip install -r requirements-dev.txt
-venv/bin/pytest                # unit and functional tests, no network nor Discord token needed
-venv/bin/pytest --cov          # with coverage report
+venv/bin/pytest                # all tests, no network nor Discord token needed
+venv/bin/pytest --cov          # with coverage report, fails under 95% (as in the CI)
+venv/bin/flake8 bot tests --max-line-length=127
 ```
-Tests live in `tests/` (`conftest.py` isolates the configuration from your `.env`, `fakes.py` provides fake Discord objects). The CI runs flake8 and pytest on Python 3.10 and 3.11.
+Tests live in `tests/`:
+- `unit/`: one file per module, network calls mocked
+- `functional/`: every command run end to end with fake Discord objects (`fakes.py`), YouTube and FFmpeg replaced by fakes
+- `contract/`: consistency between the code, `bot/data/messages.json`, this README and the data files (every text used exists and gets its placeholders, `?aide` and the tables below list exactly the registered commands)
+
+`conftest.py` isolates the configuration from your `.env`. The CI runs flake8 and pytest on Python 3.10 and 3.11.
 
 ## Docker
 ```bash
-docker build -t botghast && docker run --env-file .env botghast
+docker build -t botghast . && docker run --env-file .env botghast
 ```
 
-
-
-
+## Texts
+Every text sent on Discord (in French), the embed colours and the display limits are in `bot/data/messages.json`. The file is reloaded when it changes, no restart needed (in Docker, rebuild the image or mount the file with `MESSAGES_FILE`).
 
 ## Commands
 | Command | Description |
