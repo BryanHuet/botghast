@@ -11,6 +11,7 @@ addopts = "-m 'not network'"
 filterwarnings = [
     # discord.py itself on Python >= 3.14, nothing to fix on our side
     "ignore:.*iscoroutinefunction.*:DeprecationWarning:discord",
+    "ignore:'count' is passed as positional argument:DeprecationWarning:discord",
 ]
 
 [tool.coverage.run]
