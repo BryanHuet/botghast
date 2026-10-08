@@ -190,3 +190,22 @@ def make_voice_ctx(listeners=0, **kwargs):
     voice_channel.members.append(author)
     voice_channel.members.extend(FakeMember(f'listener{i}') for i in range(listeners))
     return FakeCtx(author=author, guild=guild, **kwargs)
+
+
+async def wait_until(predicate, timeout=1):
+    """
+    Let the event loop run until predicate() is true.
+
+    Needed after FakeVoiceClient.finish(): the after callback hands play_next over to the
+    loop with run_coroutine_threadsafe, so a single sleep(0) is not enough.
+
+    Raises:
+        asyncio.TimeoutError: If predicate() is still false after timeout seconds
+    """
+    import asyncio
+
+    async def poll():
+        while not predicate():
+            await asyncio.sleep(0.001)
+
+    await asyncio.wait_for(poll(), timeout)
