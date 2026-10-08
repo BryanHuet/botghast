@@ -23,6 +23,8 @@ os.environ.update({
 })
 os.environ.pop('MESSAGES_FILE', None)
 
+from unittest.mock import MagicMock  # noqa: E402
+
 import pytest  # noqa: E402
 
 import music  # noqa: E402
@@ -74,3 +76,47 @@ def data_files(tmp_path, monkeypatch):
         return paths
 
     return write
+
+
+@pytest.fixture
+def fake_audio(monkeypatch):
+    """
+    Replace everything that would touch the network or spawn ffmpeg in the audio pipeline.
+
+    - youtube.extract_audio_info (as imported by music and bot) resolves queries from
+      fake_audio.tracks, and raises yt_dlp DownloadError for unknown queries
+    - discord.FFmpegPCMAudio and discord.PCMVolumeTransformer are mocks
+    - ffmpeg is reported as installed
+
+    Returns:
+        FakeAudio: .tracks (query -> meta overrides), .calls (resolved queries)
+    """
+    import yt_dlp
+
+    import bot
+    import music
+
+    class FakeAudio:
+        def __init__(self):
+            self.tracks = {}
+            self.calls = []
+
+        def add(self, query, **meta):
+            self.tracks[query] = meta
+            return query
+
+        def extract_audio_info(self, query):
+            self.calls.append(query)
+            if query not in self.tracks:
+                raise yt_dlp.utils.DownloadError(f"No result for {query}")
+            meta = {'title': query, 'url': query, 'thumbnail': None, 'duration': None, 'uploader': None}
+            meta.update(self.tracks[query])
+            return f'https://stream.example/{len(self.calls)}', meta
+
+    audio = FakeAudio()
+    for module in (music, bot):
+        monkeypatch.setattr(module, 'extract_audio_info', audio.extract_audio_info)
+    monkeypatch.setattr(music.discord, 'FFmpegPCMAudio', MagicMock(name='FFmpegPCMAudio'))
+    monkeypatch.setattr(music.discord, 'PCMVolumeTransformer', MagicMock(name='PCMVolumeTransformer'))
+    monkeypatch.setattr(music.shutil, 'which', lambda name: f'/usr/bin/{name}')
+    return audio
