@@ -30,6 +30,7 @@ jobs:
           requirements.txt
           requirements-dev.txt
     - name: Install dependencies
+      id: install
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements-dev.txt
@@ -39,6 +40,22 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # style and complexity, blocking too. The GitHub editor is 127 chars wide
         flake8 . --count --max-complexity=10 --max-line-length=127 --statistics
-    - name: Test with pytest
+    # One step per kind of test, so the failing kind shows in the GitHub UI. They still run when
+    # lint or a previous kind fails; coverage is accumulated and checked once at the end.
+    - name: Unit tests
+      if: ${{ !cancelled() && steps.install.outcome == 'success' }}
       run: |
-        pytest --cov --cov-report=term-missing
+        pytest tests --ignore=tests/functional --ignore=tests/contract --cov --cov-append --cov-fail-under=0 --cov-report=
+    - name: Functional tests
+      if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+      run: |
+        pytest tests/functional --cov --cov-append --cov-fail-under=0 --cov-report=
+    - name: Contract tests
+      if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+      run: |
+        pytest tests/contract --cov --cov-append --cov-fail-under=0 --cov-report=
+    - name: Coverage
+      if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+      run: |
+        # fail_under is read from pyproject.toml
+        coverage report
