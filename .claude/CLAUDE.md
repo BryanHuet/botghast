@@ -9,7 +9,8 @@ Bot Discord personnel (discord.py, commandes à préfixe) qui envoie des GIFs et
 - `bot/data/gifs.json` — `{"gifs": ["https://tenor.com/...", ...]}`
 - `bot/data/quotes.json` — `[{"citation": "...", "author": "..."}, ...]`
 - `Dockerfile` — build multi-stage sur l'image hardened `dhi.io/python:3.11-alpine3.23-dev` (nécessite `docker login dhi.io`).
-- `.github/workflows/python-app.yml` — CI : flake8 uniquement (Python 3.10). Pas de tests (pytest commenté).
+- `.github/workflows/python-app.yml` — CI : flake8 + pytest (matrice Python 3.10 / 3.11).
+- `tests/` — pytest (`pyproject.toml`, deps dans `requirements-dev.txt`). `conftest.py` fixe l'env de test **avant** d'importer les modules (config figée à l'import) et remet à zéro les états globaux ; `fakes.py` = faux objets discord (`FakeCtx`, `FakeVoiceClient`...). Fixture `data_files` pour rediriger GIFs/citations. Lancer : `venv/bin/pytest`.
 
 ## Commandes du bot
 

@@ -33,6 +33,14 @@ QUOTES_FILE=path-to-custom-quotes-file
 venv/bin/python bot/src/bot.py
 ```
 
+## Tests
+```bash
+venv/bin/pip install -r requirements-dev.txt
+venv/bin/pytest                # unit and functional tests, no network nor Discord token needed
+venv/bin/pytest --cov          # with coverage report
+```
+Tests live in `tests/` (`conftest.py` isolates the configuration from your `.env`, `fakes.py` provides fake Discord objects). The CI runs flake8 and pytest on Python 3.10 and 3.11.
+
 ## Docker
 ```bash
 docker build -t botghast && docker run --env-file .env botghast
