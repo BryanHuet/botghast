@@ -44,7 +44,8 @@ def validate_messages_json(data):
     """
     if not isinstance(data, dict):
         raise ValueError("Invalid messages.json structure: expected an object of sections")
-    colors = data.get('style', {}).get('colors')
+    style_section = data.get('style')
+    colors = style_section.get('colors') if isinstance(style_section, dict) else None
     if not isinstance(colors, dict):
         raise ValueError("Invalid messages.json structure: expected {'style': {'colors': {...}}}")
     for name, value in colors.items():

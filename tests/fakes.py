@@ -119,6 +119,7 @@ class FakeGuild:
     def __init__(self, name='Serveur de test'):
         self.id = next(_ids)
         self.name = name
+        self.icon = None
         self.voice_client = None
 
     def add_voice_channel(self, name='Général', members=None):
