@@ -1,5 +1,7 @@
 discord==2.3.2
 discord.py[voice]==2.7.1
+# Used directly by spotify_client.py. Stay on 3.13 until aioresponses (tests) supports aiohttp 3.14
+aiohttp==3.13.5
 setproctitle==1.3.7
 pytz==2025.2
 python-dotenv==1.2.1
