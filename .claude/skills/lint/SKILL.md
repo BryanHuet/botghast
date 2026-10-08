@@ -1,26 +1,25 @@
 ---
 name: lint
-description: Reproduire en local les vérifications de la CI GitHub de BotGhast (flake8) et corriger les problèmes. À utiliser avant un commit/PR ou après une modification de bot/src/bot.py.
+description: Reproduire en local les vérifications flake8 de la CI GitHub de BotGhast et corriger les problèmes. À utiliser avant un commit/PR ou après une modification du code (bot/src) ou des tests.
 ---
 
 # Lint comme la CI
 
-La CI (`.github/workflows/python-app.yml`, Python 3.10) n'exécute que flake8, en deux passes :
+La CI (`.github/workflows/python-app.yml`, Python 3.10 et 3.11) lance flake8 en deux passes, puis pytest (voir `/test`) :
 
 ```bash
-pip install flake8
 # 1. Bloquant : erreurs de syntaxe et noms non définis
-flake8 bot --count --select=E9,F63,F7,F82 --show-source --statistics
+venv/bin/flake8 bot tests --count --select=E9,F63,F7,F82 --show-source --statistics
 # 2. Informatif (exit-zero) : style, complexité ≤ 10, lignes ≤ 127
-flake8 bot --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+venv/bin/flake8 bot tests --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 ```
 
-Cibler `bot/` (la CI lance `flake8 .`, mais localement cela scannerait `venv/`). Si un venv existe, utiliser `venv/Scripts/python -m flake8`.
+Cibler `bot tests` (la CI lance `flake8 .`, mais localement cela scannerait `venv/`). flake8 est dans `requirements-dev.txt`.
 
 ## Interprétation
 
 - Passe 1 en échec = la CI casse → corriger impérativement.
-- Passe 2 : ne corriger que les avertissements **dans le code modifié** (espaces en fin de ligne `W291/W293`, lignes vides `E302/E303`, imports inutilisés `F401`, etc.). Ne pas reformater tout le fichier sans demande : le code existant contient déjà des warnings (ex. trailing whitespace).
-- `C901` (complexité) : les commandes existantes sont proches de la limite ; pour une nouvelle commande, extraire des helpers plutôt que d'empiler les `if`.
+- Passe 2 : la viser à zéro avertissement. Le code actuel est propre ; corriger tout avertissement introduit (espaces en fin de ligne `W291/W293`, lignes vides `E302/E303`, imports inutilisés `F401`, etc.).
+- `C901` (complexité) : pour une nouvelle commande, extraire des helpers (dans `views.py`, `music.py`...) plutôt que d'empiler les `if`.
 
-Il n'y a pas de tests automatisés (étape pytest commentée dans la CI). Si des tests sont ajoutés, les placer dans `tests/` et décommenter l'étape pytest.
+Après le lint, lancer les tests : `/test`.

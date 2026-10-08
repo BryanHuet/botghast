@@ -7,23 +7,24 @@ description: Travailler sur la commande `cherchecitation` de BotGhast (search_qu
 
 **Code** : `search_quote` dans `bot/src/bot.py` — `@bot.command(name='cherchecitation', ...)`.
 **Usage Discord** : `?cherchecitation <mot-clé>` (le mot-clé peut contenir des espaces grâce à `*, keyword`).
-**Données** : `QUOTES_FILE` → validé par `validate_quotes_json`.
+**Données** : `QUOTES_FILE` → lu et validé par `datastore.load_quotes`.
+**Textes** : section `cherchecitation` de `bot/data/messages.json` ; réponse construite par `views.search_results_text`.
 
 ## Déroulé
 
-1. Relit + valide `quotes.json` (fichier absent / liste vide → message FR).
-2. Filtre les citations dont `citation` **ou** `author` contient le mot-clé (sous-chaîne, insensible à la casse, **sensible aux accents** : `ethique` ne trouve pas `éthique`).
-3. Aucun résultat → « Aucune citation trouvée pour '<mot-clé>'. »
-4. Sinon envoie les **3 premiers** résultats (ordre du fichier, donc groupés par auteur) au format `N. <citation> ~ <author>`, puis « ... et X autres résultats. »
+1. Mot-clé absent ou vide → `cherchecitation.no_keyword`.
+2. Relit + valide `quotes.json` (fichier absent → `common.quotes_file_missing`, liste vide → `common.no_quotes`, fichier invalide → `cherchecitation.error`).
+3. Filtre les citations dont `citation` **ou** `author` contient le mot-clé (sous-chaîne, insensible à la casse, **sensible aux accents** : `ethique` ne trouve pas `éthique`).
+4. Aucun résultat → `cherchecitation.no_result`.
+5. Sinon envoie les **`style.search_results` (3) premiers** résultats (ordre du fichier, donc groupés par auteur) : `cherchecitation.header`, une ligne `cherchecitation.result` par citation, puis `cherchecitation.more` s'il en reste.
 
 ## Pièges connus
 
-- **Mot-clé absent** : `keyword: str` est obligatoire → discord.py lève `MissingRequiredArgument` *avant* le corps de la fonction ; le `if not keyword` n'est jamais atteint et l'utilisateur ne reçoit rien (aucun `on_command_error`). Pour un message FR : `keyword: str = None`, ou un handler `@search_quote.error`.
-- **DM** : `ctx.guild.name` dans les logs → `AttributeError`.
+- Garder `keyword: str = None` : sans valeur par défaut, discord.py lève `MissingRequiredArgument` avant la fonction et l'utilisateur ne reçoit rien.
 - **Mentions** : le mot-clé est renvoyé tel quel dans la réponse ; `@everyone` passé en mot-clé serait réémis. Envisager `allowed_mentions=discord.AllowedMentions.none()` sur les `send`/`reply`.
-- **2000 caractères** : 3 citations longues peuvent dépasser la limite → tronquer `response[:2000]` comme `file`.
+- **2000 caractères** : 3 citations longues peuvent dépasser la limite (rien ne tronque) → l'envoi échoue et l'utilisateur reçoit `cherchecitation.error`.
 - Si on rend la recherche insensible aux accents, utiliser `unicodedata.normalize('NFKD', ...)` et retirer les combinants, sur le texte **et** le mot-clé.
 
 ## Vérification
 
-`/lint`, puis `/run-bot` : `?cherchecitation Nietzsche`, un mot sans résultat, et `?cherchecitation` seul.
+`/test` (`tests/functional/test_cmd_text.py::TestChercheCitation`), `/lint`, puis `/run-bot` : `?cherchecitation Nietzsche`, un mot sans résultat, et `?cherchecitation` seul.
