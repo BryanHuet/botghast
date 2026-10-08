@@ -51,6 +51,7 @@ Chaque commande a un skill dédié `/cmd-<commande>` (déroulé, pièges, vérif
 - Les commandes musicales exigent `ffmpeg` dans le `PATH` ; le `Dockerfile` ne l'installe pas encore.
 - Dans Docker, les données sont copiées dans l'image : modifier les JSON impose un rebuild (ou un montage de volume + `GIFS_FILE`/`QUOTES_FILE`).
 - `requirements.txt` contient à la fois `discord` (paquet miroir) et `discord.py` ; ne pas en retirer un sans vérifier.
+- `aiohttp` est figé en 3.13.x dans `requirements.txt` : `aioresponses` (mock HTTP des tests Spotify) casse avec aiohttp 3.14 (`ClientResponse.__init__() missing ... 'stream_writer'`). Ne monter qu'après avoir vérifié les tests.
 - Versions Python divergentes : CI 3.10, Docker 3.11, README ">= 3.8". Garder le code compatible 3.10.
 - Toute nouvelle commande doit être ajoutée au texte de `aide` et au README.
 
