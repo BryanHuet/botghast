@@ -170,3 +170,23 @@ class FakeCtx:
 
     def typing(self):
         return _Typing()
+
+
+def make_voice_ctx(listeners=0, **kwargs):
+    """
+    Build a context whose author is connected to a voice channel of the guild.
+
+    Args:
+        listeners: Number of other human members in the voice channel
+        **kwargs: Passed to FakeCtx (author, channel...)
+
+    Returns:
+        FakeCtx: ctx.author.voice.channel is the voice channel, the bot is not connected yet
+    """
+    guild = kwargs.pop('guild', None) or FakeGuild()
+    voice_channel = guild.add_voice_channel()
+    author = kwargs.pop('author', None) or FakeMember()
+    author.voice = FakeVoiceState(voice_channel)
+    voice_channel.members.append(author)
+    voice_channel.members.extend(FakeMember(f'listener{i}') for i in range(listeners))
+    return FakeCtx(author=author, guild=guild, **kwargs)
