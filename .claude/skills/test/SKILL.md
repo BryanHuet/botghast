@@ -15,6 +15,8 @@ venv/bin/pytest tests/functional -k joue       # un sous-ensemble (sans --cov, s
 venv/bin/pytest -m network                     # tests marqués réseau (exclus par défaut)
 ```
 
+Dans la CI, une étape par type de test (`Unit tests` = tout `tests/` sauf `functional/` et `contract/`, `Functional tests`, `Contract tests`) cumule la couverture, puis l'étape `Coverage` (`coverage report`) applique le seuil de 95 %.
+
 La CI tourne aussi en **Python 3.10** : avant une PR, le vérifier avec un venv jetable dans le scratchpad :
 
 ```bash
