@@ -14,32 +14,24 @@ DISCORD_TOKEN=...
 BOT_PREFIX=?            # optionnel
 GIFS_FILE=...           # optionnel
 QUOTES_FILE=...         # optionnel
+MESSAGES_FILE=...       # optionnel (textes affichés)
 ```
 
-Sans `DISCORD_TOKEN`, le bot lève `ValueError` au démarrage. S'il n'y a pas de token, s'arrêter là et le dire : on ne peut que vérifier la syntaxe/les imports.
+Sans `DISCORD_TOKEN`, le bot lève `ValueError` au démarrage. S'il n'y a pas de token, s'arrêter là et le dire : on ne peut que lancer les tests (`/test`).
 
 ## En local
 
-L'environnement est sous Windows (venv : `venv/Scripts/python`, pas `venv/bin/python` comme dans le README).
-
 ```bash
 python -m venv venv
-venv/Scripts/python -m pip install -r requirements.txt
+venv/bin/pip install -r requirements.txt     # Windows : venv/Scripts/...
+venv/bin/python bot/src/bot.py
 ```
 
-**Attention au CWD** : les chemins par défaut `data/gifs.json` / `data/quotes.json` sont relatifs au répertoire courant. Deux options :
+Les chemins par défaut des données (`bot/data/*.json`) sont absolus (calculés depuis `config.py`) : le bot se lance depuis n'importe quel dossier. Seul `botghast.log` est écrit dans le dossier courant.
 
-```bash
-# Option A : lancer depuis bot/ (comme dans Docker)
-cd bot && ../venv/Scripts/python src/bot.py
+Le bot tourne indéfiniment : le lancer en arrière-plan (`run_in_background`) et surveiller les logs (console + `botghast.log`). Un démarrage réussi logue `Starting BotGhast...` puis aucune erreur de connexion. Les commandes musicales demandent `ffmpeg` dans le `PATH`.
 
-# Option B : depuis la racine, en surchargeant les chemins
-GIFS_FILE=bot/data/gifs.json QUOTES_FILE=bot/data/quotes.json venv/Scripts/python bot/src/bot.py
-```
-
-Le bot tourne indéfiniment : le lancer en arrière-plan (`run_in_background`) et surveiller les logs. Logs : console + `botghast.log` dans le CWD. Un démarrage réussi logue `Starting BotGhast...` puis aucune erreur de connexion.
-
-Vérification sans token : `venv/Scripts/python -c "import ast; ast.parse(open('bot/src/bot.py', encoding='utf-8').read())"`. (Importer `bot.py` directement crée `botghast.log` et configure le bot, mais ne se connecte pas.)
+Vérification sans token : `/test` (toutes les commandes sont testées avec de faux objets Discord, sans connexion).
 
 ## Docker
 
@@ -50,8 +42,6 @@ docker build -t botghast .
 docker run --rm --env-file .env botghast
 ```
 
-(Le README oublie le `.` du contexte de build.)
-
 - Les données `bot/` sont copiées dans l'image : rebuild après toute modif du code ou des JSON.
-- Pour utiliser des données externes sans rebuild : `-v $(pwd)/bot/data:/data -e GIFS_FILE=/data/gifs.json -e QUOTES_FILE=/data/quotes.json`.
+- Pour utiliser des données externes sans rebuild : `-v $(pwd)/bot/data:/data -e GIFS_FILE=/data/gifs.json -e QUOTES_FILE=/data/quotes.json -e MESSAGES_FILE=/data/messages.json`.
 - `.env` est exclu du contexte via `.dockerignore` → toujours passer `--env-file`.

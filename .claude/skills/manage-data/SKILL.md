@@ -32,7 +32,9 @@ Depuis la racine du repo :
 python .claude/skills/manage-data/scripts/validate_data.py
 ```
 
-Le script vérifie la structure attendue par `validate_gifs_json` / `validate_quotes_json` de `bot/src/bot.py`, que les GIFs sont des URLs http(s), que les citations/auteurs ne sont pas vides, et signale les doublons (warnings). Code de sortie 1 en cas d'erreur de structure. Accepte des chemins alternatifs : `validate_data.py <gifs.json> <quotes.json>`.
+Le script vérifie la structure attendue par `validate_gifs_json` / `validate_quotes_json` de `bot/src/datastore.py`, que les GIFs sont des URLs http(s), que les citations/auteurs ne sont pas vides, et signale les doublons (warnings). Code de sortie 1 en cas d'erreur de structure. Accepte des chemins alternatifs : `validate_data.py <gifs.json> <quotes.json>`.
+
+Puis `/test` : `tests/contract/test_consistency.py::TestDataFiles` vérifie les vrais fichiers et **échoue** sur un fichier vide, un GIF non `https://` ou un doublon (là où le script ne fait qu'avertir).
 
 ## Prise en compte
 

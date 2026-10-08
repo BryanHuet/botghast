@@ -7,21 +7,21 @@ description: Travailler sur la commande `citation` de BotGhast (bot/src/bot.py) 
 
 **Code** : `citation` dans `bot/src/bot.py` — `@bot.command()`.
 **Usage Discord** : `?citation`.
-**Données** : `QUOTES_FILE` (défaut `data/quotes.json`, relatif au CWD) → `[{"citation": "...", "author": "..."}]`, validé par `validate_quotes_json`.
+**Données** : `QUOTES_FILE` (défaut `bot/data/quotes.json`) → `[{"citation": "...", "author": "..."}]`, lu et validé par `datastore.load_quotes`.
+**Textes** : sections `citation` et `common` de `bot/data/messages.json` ; format de la citation = `common.quote` (`views.format_quote`).
 
 ## Déroulé
 
-1. `os.path.exists(quotes)` sinon → « Le fichier de citations est introuvable. »
+1. `os.path.exists(QUOTES_FILE)` sinon → `common.quotes_file_missing`.
 2. Si le bot n'a pas `send_messages` dans le salon → log `error` et **retour silencieux**.
-3. Relit + valide le JSON ; liste vide → « Aucune citation disponible. »
-4. `random.choice` puis envoi (`ctx.send`) au format `"<citation> ~ <author>"`.
-5. `json.JSONDecodeError` → « Erreur de format dans le fichier de citations. » ; autre exception → « Une erreur est survenue lors de la récupération de la citation. »
+3. `load_quotes()` ; liste vide → `common.no_quotes`.
+4. `random.choice` puis envoi (`ctx.send`) de `format_quote(quote)` (`"<citation> ~ <author>"`).
+5. `ValueError` (JSON invalide ou mauvaise structure) → `citation.json_error` ; autre exception → `citation.error`.
 
 ## Pièges connus
 
-- **DM** : `ctx.guild.name` (logs) et `ctx.guild.me` (check de permission) → `AttributeError` en message privé. Protéger avec `if ctx.guild` et `guild_name = ... else "DM"`.
-- Les vérifications `isinstance(random_quote, dict)` / clés présentes sont redondantes avec `validate_quotes_json` (déjà vérifié pour toutes les citations) — on peut les retirer sans risque.
-- Le format `"citation ~ author"` est partagé avec `cherchecitation` : garder les deux cohérents si on le change.
+- Fonctionne en message privé (`guild_name(ctx)`, `ctx.me`).
+- Le format `common.quote` est partagé avec `cherchecitation` (`format_quote`) : le changer dans `messages.json` change les deux.
 - Rester sous 2000 caractères : une citation très longue ferait échouer l'envoi (`HTTPException`, rattrapée par le `except` générique).
 
 ## Données
@@ -30,4 +30,4 @@ Ajouter/corriger des citations : `/manage-data` (tri par auteur, libellés d'aut
 
 ## Vérification
 
-`/lint`, puis `/run-bot` et `?citation` plusieurs fois sur Discord.
+`/test` (`tests/functional/test_cmd_text.py::TestCitation`), `/lint`, puis `/run-bot` et `?citation` plusieurs fois sur Discord.
