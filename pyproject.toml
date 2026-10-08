@@ -1,0 +1,22 @@
+[tool.pytest.ini_options]
+# Bot modules use flat imports ("from config import ..."), as when run from bot/src
+pythonpath = ["bot/src"]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+markers = [
+    "network: real calls to YouTube or Spotify (excluded by default, run with -m network)",
+]
+addopts = "-m 'not network'"
+filterwarnings = [
+    # discord.py itself on Python >= 3.14, nothing to fix on our side
+    "ignore:.*iscoroutinefunction.*:DeprecationWarning:discord",
+]
+
+[tool.coverage.run]
+source = ["bot/src"]
+omit = ["bot/src/spotify_auth.py"]
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
