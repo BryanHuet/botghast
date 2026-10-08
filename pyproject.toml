@@ -19,5 +19,7 @@ source = ["bot/src"]
 omit = ["bot/src/spotify_auth.py"]
 
 [tool.coverage.report]
+# Checked by "pytest --cov" (CI); keep it a few points under the current coverage
+fail_under = 95
 show_missing = true
 skip_empty = true
