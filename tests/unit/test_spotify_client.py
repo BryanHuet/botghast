@@ -141,7 +141,8 @@ class TestFetchSpotifyPlaylist:
              'url': 'https://open.spotify.com/track/Helvegen', 'duration': 180.0},
         ]
         for call in requests_to(http, 'GET', SPOTIFY_API):
-            assert call.kwargs['headers'] == {'Authorization': 'Bearer token'}
+            # zstd is refused: aiohttp's zstd decoding truncates Spotify responses (Python 3.14+)
+            assert dict(call.kwargs['headers']) == {'Authorization': 'Bearer token', 'Accept-Encoding': 'gzip, deflate'}
 
     async def test_skips_non_playable_items(self, http):
         self.mock_playlist(http)
