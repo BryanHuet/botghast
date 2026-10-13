@@ -12,6 +12,10 @@ from log import logger
 
 spotify_token = {'access_token': None, 'expires_at': 0, 'refresh_token': SPOTIFY_REFRESH_TOKEN}
 
+# aiohttp advertises zstd when the interpreter supports it (Python 3.14+), but its zstd
+# decoding of Spotify responses fails or truncates the body: only accept gzip/deflate
+SPOTIFY_HEADERS = {'Accept-Encoding': 'gzip, deflate'}
+
 
 def parse_spotify_playlist_id(value):
     """
@@ -83,7 +87,7 @@ async def fetch_spotify_playlist(playlist_id):
         RuntimeError: If the Spotify API returns an error
     """
     tracks = []
-    async with aiohttp.ClientSession() as session:
+    async with aiohttp.ClientSession(headers=SPOTIFY_HEADERS) as session:
         token = await get_spotify_access_token(session)
         headers = {'Authorization': f'Bearer {token}'}
 
